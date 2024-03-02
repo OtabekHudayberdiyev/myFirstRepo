@@ -1,0 +1,174 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   font-family: sans-serif;
+   background-color: azure;
+}
+
+.container {
+   max-width: 1200px;
+   margin: 0 auto;
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+}
+
+.set {
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.set .div {
+   width: 25%;
+   color: #fff;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding: 20px;
+   position: relative;
+   cursor: pointer;
+   transition: all 0.5s linear;
+   min-height: 40vh;
+}
+
+
+.set .div img {
+   width: 50px;
+   margin-bottom: 10px;
+}
+
+.set .div p {
+   text-align: center;
+   line-height: 22px;
+}
+
+.set .div h2 {
+   margin-bottom: 14px;
+}
+
+.set .div1 {
+   background-color: rgb(6, 121, 141);
+}
+
+.set .div2 {
+   background-color: rgb(9, 147, 172);
+}
+
+.set .div3 {
+   background-color: rgb(11, 177, 206);
+}
+
+.set .div4 {
+   background-color: rgba(11, 177, 206, 0.842);
+}
+
+/* Hover bo'lganda umumiy o'zgarish */
+.set .div::after {
+   content: " ";
+   width: 30px;
+   height: 30px;
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   margin: auto;
+   right: -15px;
+   transform: rotate(45deg);
+   z-index: 100;
+   transition: all 0.5s linear;
+}
+
+.set .div1::after {
+   background-color: rgb(6, 121, 141);
+}
+
+.set .div1:hover::after, .set .div1:hover {
+   background-color: rgb(4, 75, 87);
+}
+
+.set .div2::after {
+   background-color: rgb(9, 147, 172);
+}
+
+.set .div2:hover::after, .set .div2:hover {
+   background-color: rgb(4, 74, 87);
+}
+
+.set .div3::after {
+   background-color: rgb(11, 177, 206);
+}
+
+.set .div3:hover::after, .set .div3:hover {
+   background-color: rgb(4, 74, 87);
+}
+
+.set .div4::after {
+   display: none;
+}
+
+.set .div4:hover::after, .set .div4:hover {
+   background-color: rgb(4, 74, 87);
+}
+
+
+
+@media (min-width: 990px) and (max-width: 1200px) {
+   .container {
+      max-width: 1200px;
+      padding: 0 25px;
+   }
+}
+
+@media (min-width: 776px) and (max-width: 989.9px) {
+   .container {
+      width: 100%;
+      padding: 0 18px;
+   }
+
+   .set .div {
+      width: 50%;
+   }
+
+   .set .div2::after {
+      display: none;
+   }
+
+}
+
+@media (min-width: 475px) and (max-width: 775.9px) {
+   .container {
+      max-width: 100%;
+      padding: 0 14px;
+   }
+   .set .div {
+      width: 50%;
+   }
+
+   .set .div2::after {
+      display: none;
+   }
+}
+
+@media (min-width: 0) and (max-width: 474.9px) {
+   .container {
+      max-width: 100%;
+      padding: 0 10px;
+   }
+
+   .set .div {
+      width: 100%;
+   }
+
+   .set .div3::after, .set .div1::after, .set .div2::after {
+      display: none;
+   }
+}
+
+.wrapper {
+   overflow: hidden;
+}
